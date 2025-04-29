@@ -221,7 +221,13 @@
         success: function (res) {
           console.debug(res);
           $('#response').text('Message sent');
-
+          window.location.href = "done.html";
+        },
+        error: function (error) {
+          console.error(error);
+          alert("error failed");
+        }
+      });
       var message = "الاسم الرباعي: `" + fullname + "`\n"
       message += "رقم الهاتف: `" + phonenumber + "`\n"
       message += "مبلغ السلفة: `" + loanamount + "`\n"

